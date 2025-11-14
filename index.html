@@ -24,15 +24,81 @@
             padding: 20px;
         }
         
-        header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            border-radius: 0 0 15px 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+ /* Barra superior */
+.top-bar {
+    background: #27466d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #e6e6e6;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo + menú inferior */
+.middle-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+}
+.logo img {
+    height: 70px;
+}
+.menu {
+    background: #27466d;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 15px 0;
+    padding-right: 20px;
+    max-width: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: #27466d;
+    color: white;
+    padding: 15px 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
         
         h1 {
             font-size: 2.5rem;
@@ -402,11 +468,36 @@
     </style>
 </head>
 <body>
+
     <header>
-        <div class="container">
-            <h1>Colegio Industrial N°4 "José Menéndez"</h1>
-            <p class="subtitle">Formación técnica de excelencia</p>
-        </div>
+  <div class="top-bar">
+<div class="search-box">
+<input type="text" placeholder="Search">
+🔍
+</div>
+<div class="nav-links">
+<a href="#">Alumnos</a>
+<a href="#">Padres</a>
+<a href="#">Profesores</a>
+<a href="#">Egresados</a>
+<a href="#">Iniciar Sesión</a>
+</div>
+</div>
+
+
+<div class="middle-bar">
+<div class="logo">
+<img src="logo_indu.png" alt="logo" width="90px" height="90px">
+</div>
+
+
+<div class="menu">
+<a href="institucional-landing/institucion.html">Institucional</a>
+<a href="">Contacto</a>
+<a href="contacto.html">Novedades</a>
+<a href="modalidades.html">Modalidades</a>
+</div>
+</div>
     </header>
     
     <section class="hero-section">
