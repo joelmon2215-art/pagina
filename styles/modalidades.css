@@ -1,0 +1,231 @@
+/* --- General --- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a2a4f;
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    background: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+/* Barra superior */
+.top-bar {
+    background: #27466d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #e6e6e6;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo + menú inferior */
+.middle-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+}
+.logo img {
+    height: 70px;
+}
+.menu {
+    background: #27466d;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 15px 0;
+    padding-right: 20px;
+    max-width: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: #27466d;
+    color: white;
+    padding: 15px 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* --- Carrusel --- */
+/* CONTENEDOR */
+.carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    padding: 50px 0;
+}
+
+/* TARJETAS BASE */
+.card {
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* TARJETA CENTRAL */
+.main {
+    width: 330px;
+    height: 200px;
+    background-color: #314f80;
+    position: relative;
+}
+
+.icon img {
+    width: 90px;
+}
+
+/* FLECHAS */
+.arrow {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+/* TARJETA DERECHA */
+.big {
+    width: 350px;
+    padding: 25px;
+    background-color: #426aa0;
+    color: white;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.big p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 25px;
+    background-color: #cfd8e8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* --- Info --- */
+.info {
+    text-align: center;
+    padding: 40px 80px;
+}
+
+.info h2 {
+    color: #1a2a4f;
+}
+
+.info p {
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.secondary-btn {
+    background-color: #cfd8e8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* --- Video --- */
+.video-section {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.video-placeholder {
+    width: 400px;
+    height: 250px;
+    background-color: #4863A0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a2a4f;
+    color: white;
+    padding: 30px 50px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #cfd8e8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    border-top: 1px solid #3c4b73;
+    padding-top: 10px;
+}
+
