@@ -1,54 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page - Contacto</title>
-  <link rel="stylesheet" href="./styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Instituto</title>
+    <link rel="stylesheet" href="./styles/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Alumnos</a></li>
-        <li><a href="#">Padres</a></li>
-        <li><a href="#">Profesores</a></li>
-        <li><a href="#">Egresados</a></li>
-        <li><a href="#">Iniciar Sesión</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Primera sección -->
-  <section class="contact-section">
-    <div class="formulario">
-      <h2>Formulario de contacto</h2>
-      <form>
-        <input type="email" placeholder="Correo" required>
-        <input type="text" placeholder="Nombre" required>
-        <textarea placeholder="Mensaje" rows="5"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-
-    <div class="info-contacto">
-      <h2>Contacto Teoría</h2>
-      <p>📱 Whatsapp: +54 9 1234 5678</p>
-      <p>📧 Gmail: teoria@instituto.com</p>
-      <p>📍 Ubicación: Dirección Teoría</p>
-    </div>
-
-    <div class="mapa-pequeno">
-      <h2>Mapa Taller</h2>
-      <iframe src="https://www.google.com/maps/embed?..."></iframe>
-    </div>
-  </section>
-
-  <!-- Segunda sección -->
-  <section class="mapa-grande">
-    <iframe src="https://www.google.com/maps/embed?..."></iframe>
-  </section>
-
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="search-area">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <nav class="top-nav">
+                    <a href="#">Alumnos</a>
+                    <a href="#">Padres</a>
+                    <a href="#">Professores</a>
+                    <a href="#">Egresados</a>
+                    <a href="#" class="login-btn">Iniciar Sesión</a>
+                </nav>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1>Instituto</h1>
+                </div>
+                <nav class="main-nav">
+                    <a href="#">Institucional</a>
+                    <a href="#" class="active">Contacto</a>
+                    <a href="#">Novedades</a>
+                    <a href="#">Modalidades</a>
+                </nav>
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <div class="container">
+                <span>Inicio > Contacto</span>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="contact-section">
+            <div class="form-container">
+                <h2>Formulario de Contacto</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Contacto Teoría</h3>
+                    <div class="contact-details">
+                        <p><i class="fab fa-whatsapp"></i> <span id="whatsapp-teoria">+34 123 456 789</span></p>
+                        <p><i class="fas fa-envelope"></i> <span id="email-teoria">teoria@instituto.com</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span id="address-teoria">Calle Teoría 123, Localidad, Provincia, País</span></p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <h3><i class="fas fa-tools"></i> Contacto Taller</h3>
+                    <div class="contact-details">
+                        <p><i class="fab fa-whatsapp"></i> <span id="whatsapp-taller">+34 987 654 321</span></p>
+                        <p><i class="fas fa-envelope"></i> <span id="email-taller">taller@instituto.com</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span id="address-taller">Avenida Taller 456, Localidad, Provincia, País</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="maps-section">
+            <div class="map-container">
+                <h3>Ubicación Teoría</h3>
+                <div class="map-placeholder map-small" id="map-teoria">
+                    <p>Mapa de la ubicación de teoría</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <h3>Ubicación Taller</h3>
+                <div class="map-placeholder map-large" id="map-taller">
+                    <p>Mapa de la ubicación de taller</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Instituto. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
