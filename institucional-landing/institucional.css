@@ -1,0 +1,161 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  background-color: #0077cc;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  background-color: #3399ff;
+  color: white;
+  font-size: 24px;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+/* Historia */
+.history-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.history-card {
+  display: flex;
+  flex: 1 1 45%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.image-box {
+  background-color: #3399ff;
+  color: white;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.text-box {
+  padding: 20px;
+  width: 60%;
+}
+
+/* Timeline */
+.timeline-section {
+  background-color: #e0e0e0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.arrow-left, .arrow-right {
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.timeline-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .history-card {
+    flex-direction: column;
+  }
+
+  .image-box, .text-box {
+    width: 100%;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+.autoridades-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.carousel-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 0 0 300px;
+  scroll-snap-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 80%;
+  }
+}
