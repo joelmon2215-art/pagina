@@ -1,4 +1,4 @@
-/* styles.css */
+/* styles.css - MODIFICADO PARA FORMULARIO */
 :root {
     --primary-color: #395886;
     --secondary-color: #B1C9EF;
@@ -167,6 +167,7 @@ h3 {
     display: flex;
     gap: 30px;
     margin-bottom: 40px;
+    
 }
 
 .form-container, .contact-info {
@@ -175,12 +176,14 @@ h3 {
     padding: 25px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    border-radius: 30px;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    border-radius: 30px;
 }
 
 .contact-card {
@@ -188,8 +191,8 @@ h3 {
     border-radius: var(--border-radius);
     background-color: var(--light-color);
     border-left: 4px solid var(--primary-color);
+    border-radius: 30px;
 }
-
 .contact-card h3 {
     display: flex;
     align-items: center;
@@ -198,6 +201,7 @@ h3 {
 
 .contact-card h3 i {
     color: var(--primary-color);
+
 }
 
 .contact-details {
@@ -215,6 +219,7 @@ h3 {
     display: flex;
     gap: 30px;
     margin-bottom: 40px;
+    
 }
 
 .map-container {
@@ -245,56 +250,77 @@ h3 {
     height: 400px;
 }
 
-/* Form Styles */
+/* FORMULARIO MODIFICADO - Como en la imagen */
+.form-container h2 {
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    border-radius: 8px;
 }
 
-label {
+.form-group label {
     font-weight: 600;
     color: var(--dark-color);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    
 }
 
 input, textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
+    padding: 15px;
+    border: 2px solid #ddd;
     border-radius: var(--border-radius);
     font-size: 1rem;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
+    background-color: #f8f9fa;
 }
 
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(57, 88, 134, 0.1);
 }
 
 textarea {
     min-height: 150px;
     resize: vertical;
+    font-family: inherit;
 }
 
 button {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 15px 20px;
     border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    border-radius: 30px;
 }
 
 button:hover {
     background-color: var(--dark-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer Styles */
