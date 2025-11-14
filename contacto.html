@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Instituto</title>
+    <link rel="stylesheet" href="./styles/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 150px;
+            margin-bottom: 1.5rem;
+            padding: 0 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;      
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            background-color: #34495e;
+            background-color: 34495E;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-item i {
+            margin-right: 1rem;
+            color: #3498db;
+            width: 30px;
+            text-align: center;
+        }
+
+        .location-info {
+            margin-top: 1rem;
+
+        }
+
+        .location-item {
+            margin-bottom: 0.8rem;
+        }
+
+        .location-item strong {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid #34495e;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 0;
+        }
+    
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+            
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="search-area">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <nav class="top-nav">
+                    <a href="#">Alumnos</a>
+                    <a href="#">Padres</a>
+                    <a href="#">Professores</a>
+                    <a href="#">Egresados</a>
+                    <a href="#" class="login-btn">Iniciar Sesión</a>
+                </nav>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1>Instituto</h1>
+                </div>
+                <nav class="main-nav">
+                    <a href="#">Institucional</a>
+                    <a href="#" class="active">Contacto</a>
+                    <a href="#">Novedades</a>
+                    <a href="#">Modalidades</a>
+                </nav>
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <div class="container">
+                <span>Inicio > Contacto</span>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="contact-section">
+            <div class="form-container">
+                <h2>Formulario de Contacto</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Contacto Teoría</h3>
+                    <div class="contact-details">
+                        <p><i class="fab fa-whatsapp"></i> <span id="whatsapp-teoria">+34 123 456 789</span></p>
+                        <p><i class="fas fa-envelope"></i> <span id="email-teoria">teoria@instituto.com</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span id="address-teoria">Calle Teoría 123, Localidad, Provincia, País</span></p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <h3><i class="fas fa-tools"></i> Contacto Taller</h3>
+                    <div class="contact-details">
+                        <p><i class="fab fa-whatsapp"></i> <span id="whatsapp-taller">+34 987 654 321</span></p>
+                        <p><i class="fas fa-envelope"></i> <span id="email-taller">taller@instituto.com</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span id="address-taller">Avenida Taller 456, Localidad, Provincia, País</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section class="maps-section">
+            <div class="map-container">
+                <h3>Ubicación Teoría</h3>
+                <div class="map-placeholder map-small" id="map-teoria">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9469.624908307287!2d-69.219212827823!3d-51.62196174943044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdb6f94e406141db%3A0x7e5545ad8de8aead!2sColegio%20Industrial%20N%C2%B04%20%22Jose%20Menendez%22!5e1!3m2!1ses!2sar!4v1763149322581!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <h3>Ubicación Taller</h3>
+                <div class="map-placeholder map-large" id="map-taller">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9547.258282958386!2d-69.21739052782388!3d-51.62089234942656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdb6f94e8faf74fd%3A0xe9e8958f6aeff2df!2sTaller%20De%20Escuela%20Industrial%20N%C2%B04!5e1!3m2!1ses!2sar!4v1763149490748!5m2!1ses!2sar" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>INSTITUTO</h3>
+                <div class="location-info">
+                    <img src="logo indu.png" alt="" width="150px" height="150px">
+                </div>
+            </div>
+
+                        <div class="footer-section">
+                <h3>DIRECCIÓN</h3>
+                <div class="location-info">
+                    <div class="location-item">
+                        <strong>Ubicación de Colegio</strong>
+                        <p>Bartolome Mitre tanto</p>
+                    </div>
+                    <div class="location-item">
+                        <strong>Ubicacion de Taller</strong>
+                        <p>No se</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>CONTACTO</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+54 11 1234-5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>+54 9 11 8765-4321</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@empresa.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>www.empresa.com</span>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Alumnos de 6to II Informatica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
