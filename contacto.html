@@ -7,6 +7,81 @@
     <link rel="stylesheet" href="./styles/contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
+    /* Barra superior */
+.top-bar {
+    background: #27466d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #e6e6e6;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo + menú inferior */
+.middle-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+}
+.logo img {
+    height: 70px;
+}
+.menu {
+    background: #27466d;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 15px 0;
+    padding-right: 20px;
+    max-width: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: #27466d;
+    color: white;
+    padding: 15px 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
         footer {
             background-color: #2c3e50;
             color: #ecf0f1;
@@ -97,40 +172,35 @@
 
 </head>
 <body>
-    <header>
-        <div class="top-header">
-            <div class="container">
-                <div class="search-area">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search">
-                </div>
-                <nav class="top-nav">
-                    <a href="#">Alumnos</a>
-                    <a href="#">Padres</a>
-                    <a href="#">Professores</a>
-                    <a href="#">Egresados</a>
-                    <a href="#" class="login-btn">Iniciar Sesión</a>
-                </nav>
-            </div>
-        </div>
-        <div class="main-header">
-            <div class="container">
-                <div class="logo">
-                    <h1>Instituto</h1>
-                </div>
-                <nav class="main-nav">
-                    <a href="#">Institucional</a>
-                    <a href="#" class="active">Contacto</a>
-                    <a href="#">Novedades</a>
-                    <a href="#">Modalidades</a>
-                </nav>
-            </div>
-        </div>
-        <div class="breadcrumb">
-            <div class="container">
-                <span>Inicio > Contacto</span>
-            </div>
-        </div>
+     <header>
+  <div class="top-bar">
+<div class="search-box">
+<input type="text" placeholder="Search">
+🔍
+</div>
+<div class="nav-links">
+<a href="# ">Alumnos</a>
+<a href="#">Padres</a>
+<a href="#">Profesores</a>
+<a href="#">Egresados</a>
+<a href="#">Iniciar Sesión</a>
+</div>
+</div>
+
+
+<div class="middle-bar">
+<div class="logo">
+<img src="logo_indu.png" alt="logo" width="90px" height="90px">
+</div>
+
+
+<div class="menu">
+<a href="institucional-landing/institucion.html">Institucional</a>
+<a href="">Contacto</a>
+<a href="contacto.html">Novedades</a>
+<a href="modalidades.html">Modalidades</a>
+</div>
+</div>
     </header>
     
     <main class="container">
