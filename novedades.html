@@ -5,6 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novedades - Colegio Industrial</title>
     <style>
+        /* Barra superior */
+.top-bar {
+    background: #27466d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #e6e6e6;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo + menú inferior */
+.middle-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+}
+.logo img {
+    height: 70px;
+}
+.menu {
+    background: #27466d;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 15px 0;
+    padding-right: 20px;
+    max-width: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: #27466d;
+    color: white;
+    padding: 15px 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
         * {
             margin: 0;
             padding: 0;
@@ -319,7 +394,7 @@
 
 <div class="menu">
 <a href="index.html">Inicio</a>    
-<a href="institucional-landing/institucion.html">Institucional</a>
+<a href="institucion.html">Institucional</a>
 <a href="contacto.html">Contacto</a>
 <a href="novedades.html">Novedades</a>
 <a href="modalidades.html">Modalidades</a>
