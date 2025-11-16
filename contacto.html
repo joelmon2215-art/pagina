@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="./styles/contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-    /* Barra superior */
+ /* Barra superior */
 .top-bar {
     background: #27466d;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
 }
 .search-box {
     display: flex;
     align-items: center;
     background: #e6e6e6;
-    padding: 5px 10px;
+    padding: 0px 30px;
     border-radius: 20px;
 }
 .search-box input {
@@ -46,7 +46,7 @@
     background: white;
 }
 .logo img {
-    height: 70px;
+    height: 85px;
 }
 .menu {
     background: #27466d;
@@ -55,7 +55,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 40px;
-    padding: 15px 0;
+    padding: 25px 0;
     padding-right: 20px;
     max-width: 800px;
     margin-top: 10px;
@@ -71,7 +71,7 @@
 /* Breadcrumb */
 .breadcrumb {
     background: #27466d;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 15px 40px;
     font-size: 14px;
     display: flex;
@@ -114,23 +114,25 @@
             display: inline-block;      
         }
 
-        .contact-info {
-            margin-top: 1rem;
+        .contact-info-footer{
+            margin-top: 0.2rem;
             background-color: #34495e;
-            background-color: 34495E;
+            background-color: #34495E;
         }
+        
 
-        .contact-item {
+        .contact-item-footer {
             display: flex;
             align-items: center;
             margin-bottom: 0.8rem;
         }
 
-        .contact-item i {
+        .contact-item-footer {
             margin-right: 1rem;
             color: #3498db;
-            width: 30px;
+            width: 400px;
             text-align: center;
+            
         }
 
         .location-info {
@@ -145,6 +147,26 @@
         .location-item strong {
             color: #3498db;
         }
+        .maps-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.map-container {
+  flex: 1 1 400px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.map-placeholder iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 8px;
+}
 
         .footer-bottom {
             text-align: center;
@@ -166,6 +188,59 @@
                 margin-bottom: 2rem;
             }
         }
+
+        /* Contacto */
+        .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        background-color: #d5deef; /* fondo oscuro */
+        }
+
+        .contact-card {
+        background-color: #34495e;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        padding: 2rem;
+        width: 150%;
+        max-width: 500px;
+        min-width: 250px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+        margin: 1rem;
+        }
+
+        .contact-card:hover {
+        transform: scale(1.02);
+        }
+
+        .contact-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: #0056b3;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        }
+
+        .contact-details p {
+        font-size: 1.05rem;
+        margin: 0.75rem 0;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        }
+
+        .contact-details i {
+        color: #0077cc;
+        font-size: 1.2rem;
+        }
+
+
+
     </style>
 
 
@@ -190,7 +265,7 @@
 
 <div class="middle-bar">
 <div class="logo">
-<img src="logo_indu.png" alt="logo" width="90px" height="90px">
+<img src="logo indu.png" alt="logo" width="90px" height="90px">
 </div>
 
 
@@ -203,7 +278,11 @@
 </div>
 </div>
     </header>
-    
+        <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="index.html">Inicio</a> > <a href="novedades.html">Contacto</a>
+        </div>
+    </div>
     <main class="container">
         <section class="contact-section">
             <div class="form-container">
@@ -228,8 +307,8 @@
                 </form>
             </div>
             
-            <div class="contact-info">
-                <div class="contact-card">
+            <div class="contact-card">
+                <div class="contact-info">
                     <h3><i class="fas fa-chalkboard-teacher"></i> Contacto Teoría</h3>
                     <div class="contact-details">
                         <p><i class="fab fa-whatsapp"></i> <span id="whatsapp-teoria">+34 123 456 789</span></p>
@@ -238,7 +317,7 @@
                     </div>
                 </div>
                 
-                <div class="contact-card">
+                <div class="contact-info">
                     <h3><i class="fas fa-tools"></i> Contacto Taller</h3>
                     <div class="contact-details">
                         <p><i class="fab fa-whatsapp"></i> <span id="whatsapp-taller">+34 987 654 321</span></p>
@@ -254,7 +333,7 @@
         <section class="maps-section">
             <div class="map-container">
                 <h3>Ubicación Teoría</h3>
-                <div class="map-placeholder map-small" id="map-teoria">
+                <div class="map-placeholder map-large" id="map-teoria">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9469.624908307287!2d-69.219212827823!3d-51.62196174943044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdb6f94e406141db%3A0x7e5545ad8de8aead!2sColegio%20Industrial%20N%C2%B04%20%22Jose%20Menendez%22!5e1!3m2!1ses!2sar!4v1763149322581!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                 </div>
@@ -278,7 +357,7 @@
             <div class="footer-section">
                 <h3>INSTITUTO</h3>
                 <div class="location-info">
-                    <img src="./logo_indu.png" alt="" width="150px" height="150px">
+                    <img src="logo indu.png" alt="" width="150px" height="150px">
                 </div>
             </div>
 
@@ -299,20 +378,20 @@
             
             <div class="footer-section">
                 <h3>CONTACTO</h3>
-                <div class="contact-info">
-                    <div class="contact-item">
+                <div class="contact-info-footer">
+                    <div class="contact-item-footer">
                         <i class="fas fa-phone-alt"></i>
                         <span>+54 11 1234-5678</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item-footer">
                         <i class="fas fa-mobile-alt"></i>
                         <span>+54 9 11 8765-4321</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item-footer">
                         <i class="fas fa-envelope"></i>
                         <span>info@empresa.com</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item-footer">
                         <i class="fas fa-globe"></i>
                         <span>www.empresa.com</span>
                     </div>
@@ -326,7 +405,41 @@
             <p>&copy; 2025 Alumnos de 6to II Informatica. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        // Esperar a que el DOM esté cargado
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita el envío real
+
+    // Obtener valores
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Validación básica
+    if (!name || !email || !message) {
+      alert('Por favor, completá todos los campos.');
+      return;
+    }
+
+    // Validación de email simple
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Ingresá un correo electrónico válido.');
+      return;
+    }
+
+    // Simular envío exitoso
+    alert('¡Gracias por tu mensaje, ' + name + '! Nos pondremos en contacto pronto.');
+
+    // Limpiar formulario
+    form.reset();
+  });
+});
+
+    </script>
     
-    <script src="script.js"></script>
 </body>
 </html>

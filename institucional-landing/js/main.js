@@ -99,3 +99,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 });
+
+// Esperar a que el DOM esté cargado
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita el envío real
+
+    // Obtener valores
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Validación básica
+    if (!name || !email || !message) {
+      alert('Por favor, completá todos los campos.');
+      return;
+    }
+
+    // Validación de email simple
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Ingresá un correo electrónico válido.');
+      return;
+    }
+
+    // Simular envío exitoso
+    alert('¡Gracias por tu mensaje, ' + name + '! Nos pondremos en contacto pronto.');
+
+    // Limpiar formulario
+    form.reset();
+  });
+});
