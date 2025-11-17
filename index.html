@@ -761,6 +761,55 @@
                 });
             });
         });
+
+        
+        //movimiento del hero
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroData = [
+            {
+                img: './bannerPrueba.jpg',
+                title: 'Colegio Industrial N°4 "José Menéndez"',
+                text: 'Institución educativa con más de 50 años formando técnicos profesionales en diversas especialidades industriales y tecnológicas.'
+            },
+            {
+                img: './informatica.jpg',
+                title: 'Tecnicatura en Informática',
+                text: 'Formación en desarrollo de software, redes y soporte técnico para entornos digitales modernos.'
+            },
+            {
+                img: './electromecanica.jpg',
+                title: 'Tecnicatura en Electromecánica',
+                text: 'Preparación para operar, mantener y reparar sistemas eléctricos y mecánicos en industrias y obras públicas.'
+            },
+            {
+                img: './construcciones.jpg',
+                title: 'Tecnicatura en Construcciones',
+                text: 'Diseño, planificación y ejecución de obras civiles con enfoque técnico y profesional.'
+            }
+            ];
+
+            let currentIndex = 0;
+
+            const heroImg = document.querySelector('.hero-overlay img');
+            const heroTitle = document.querySelector('.hero-content h1');
+            const heroText = document.querySelector('.hero-content p');
+
+            const updateHero = () => {
+            const item = heroData[currentIndex];
+            heroImg.src = item.img;
+            heroTitle.textContent = item.title;
+            heroText.textContent = item.text;
+            };
+
+            // Cambiar cada 10 segundos
+            setInterval(() => {
+            currentIndex = (currentIndex + 1) % heroData.length;
+            updateHero();
+            }, 5000); // segundos
+
+            // Inicializar
+            updateHero();
+        });
     </script>
 </body>
 </html>
