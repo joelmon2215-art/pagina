@@ -110,10 +110,11 @@
             font-size: 1.2rem;
             opacity: 0.9;
         }
-        
+        /* Contenedor principal del hero */
         .hero-section {
             position: relative;
-            height: 400px;
+            width: 100%;
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -122,7 +123,7 @@
             margin-bottom: 30px;
             border-radius: 15px;
         }
-        
+        /* Imagen de fondo */
         .hero-bg {
             position: absolute;
             top: 0;
@@ -131,36 +132,40 @@
             height: 100%;
             object-fit: cover;
             filter: brightness(0.9);
+            z-index: 1;
         }
         
         .hero-overlay {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            left: 10;
+            right: 10;
+            width: 90%;
+            height: 90%;
             background: linear-gradient(135deg, #628ecb 0%, #b1c9ef 50%, #f0f3fa 100%);
         }
-        
+        /* Contenido del hero */    
         .hero-content {
             position: relative;
-            z-index: 10;
+            z-index: 3; /* encima del overlay */
             max-width: 800px;
-            margin-left: 300px;
-            color: #2c3e50;
-            padding: 0 20px;
+            margin: 0 auto; /* centra horizontalmente */
+            padding: 20px;
+            color: #ffffff;
+            text-align: center; /* centra el texto */
         }
-        
+        /* Título */
         .hero-content h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
         }
-        
+        /* Texto */
         .hero-content p {
-            font-size: 1.2rem;
+             font-size: 1.2rem;
             line-height: 1.6;
             opacity: 0.95;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
         }
         
         .main-content {
@@ -767,22 +772,22 @@
         document.addEventListener('DOMContentLoaded', () => {
             const heroData = [
             {
-                img: './bannerPrueba.jpg',
+                img: 'ftnoticia1.jpg',
                 title: 'Colegio Industrial N°4 "José Menéndez"',
                 text: 'Institución educativa con más de 50 años formando técnicos profesionales en diversas especialidades industriales y tecnológicas.'
             },
             {
-                img: './informatica.jpg',
+                img: 'ftnoticia2.jpg',
                 title: 'Tecnicatura en Informática',
                 text: 'Formación en desarrollo de software, redes y soporte técnico para entornos digitales modernos.'
             },
             {
-                img: './electromecanica.jpg',
+                img: 'ftnoticia3.jpg',
                 title: 'Tecnicatura en Electromecánica',
                 text: 'Preparación para operar, mantener y reparar sistemas eléctricos y mecánicos en industrias y obras públicas.'
             },
             {
-                img: './construcciones.jpg',
+                img: 'ftnoticia1.jpg',
                 title: 'Tecnicatura en Construcciones',
                 text: 'Diseño, planificación y ejecución de obras civiles con enfoque técnico y profesional.'
             }
