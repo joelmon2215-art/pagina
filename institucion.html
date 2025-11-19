@@ -45,24 +45,23 @@
             <a href="index.html">Inicio</a> > <a href="novedades.html">Novedades</a>
         </div>
     </div>
-  <main>
-    <section class="history-section">
-      <div class="history-card">
-        <div class="image-box">Imagen</div>
-        <div class="text-box">
-          <h2>¿Quién fundó el Industrial N°4?</h2>
-          <p>Lorem Ipsum es simplemente el texto de relleno...</p>
-        </div>
-      </div>
+    <main>
+        <section class="history-section">
+        <div class="history-card">
+            <div class="image-box">
+                <img src="ftnoticia1.jpg" alt="">
+            </div>
+            <div class="text-box">
+            <h2>¿Quién fundó el Industrial N°4?</h2>
+            <p>Lorem Ipsum es simplemente el texto de relleno...</p>
 
-      <div class="history-card">
-        <div class="image-box">Imagen</div>
-        <div class="text-box">
-          <h2>¿Cuándo se fundó?</h2>
-          <p>Lorem Ipsum es simplemente el texto de relleno...</p>
+            <div class="text-box">
+            <h2>¿Cuándo se fundó?</h2>
+            <p>Lorem Ipsum es simplemente el texto de relleno...</p>
+            </div>
         </div>
-      </div>
-    </section>
+        </div>
+        </section>
 
     <section class="timeline-section">
       <div class="timeline-header">
@@ -81,22 +80,22 @@
   <div class="carousel-container">
     <div class="carousel-track">
         <div class="card">
-            <img src="autoridad1.jpg" alt="Foto de Castro Mamani">
+            <img src="autoridadprueba.jpg" alt="Foto de Castro Mamani">
             <h3>Castro Mamani</h3>
             <p>Director General</p>
         </div>
         <div class="card">
-            <img src="autoridad2.jpg" alt="Foto de Lucía Fernández">
+            <img src="autoridadprueba.jpg" alt="Foto de Lucía Fernández">
             <h3>Lucía Fernández</h3>
             <p>Vicedirectora</p>
         </div>
         <div class="card">
-            <img src="autoridad3.jpg" alt="Foto de Martín Gómez">
+            <img src="autoridadprueba.jpg" alt="Foto de Martín Gómez">
             <h3>Martín Gómez</h3>
             <p>Jefe de Taller</p>
         </div>
         <div class="card">
-            <img src="autoridad3.jpg" alt="Foto de Martín Gómez">
+            <img src="autoridadprueba.jpg" alt="Foto de Martín Gómez">
             <h3>Martín Gómez</h3>
             <p>Jefe de Taller</p>
         </div>
@@ -108,6 +107,89 @@
 
 
  <style>
+.image-box {
+    width: 60%;
+    height: 250px;
+    background: #ffffff;          /* reemplazar con imagen real */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* Bloques de texto */
+.text-box {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
+/* Contenedor principal del carrusel */
+.carousel-container {
+    display: flex;
+    justify-content: center;   /* centra horizontalmente */
+    align-items: center;       /* centra verticalmente */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Track que contiene las cards */
+.carousel-track {
+    display: flex;
+    justify-content: center;   /* centra las cards dentro */
+    flex-wrap: wrap;           /* permite que bajen a otra fila si no entran */
+    gap: 20px;                 /* espacio entre cards */
+    max-width: 1500px;         /* ancho máximo centrado */
+}
+
+/* Cada card */
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;        /* centra el contenido dentro de la card */
+    padding: 20px;
+    width: 220px;              /* tamaño fijo para uniformidad */
+}
+
+/* Imagen dentro de la card */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Título */
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Texto */
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
  /* Barra superior */
 .top-bar {
     background: #27466d;
@@ -278,7 +360,7 @@
             <div class="footer-section">
                 <h3>INSTITUTO</h3>
                 <div class="location-info">
-                    <img src="logo_indu.png" alt="" width="150px" height="150px">
+                    <img src="logo indu.png" alt="" width="150px" height="150px">
                 </div>
             </div>
 
