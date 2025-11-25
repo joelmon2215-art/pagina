@@ -1,16 +1,28 @@
-/* --- General --- */
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #1a2a4f;
-    background-color: #ffffff;
-}
 
-body {
-    margin: 0;
-    background: white;
-    font-family: 'Segoe UI', sans-serif;
-}
+/* Tu código CSS comienza aquí */
+/* body { ... } */
+/* .carousel { ... } */
+/* --- General --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+ /* Barra superior */
 /* Barra superior */
 .top-bar {
     background: #27466d;
@@ -18,13 +30,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 27px 20px;
+    padding: 25px 20px;
 }
 .search-box {
     display: flex;
     align-items: center;
     background: #e6e6e6;
-    padding: 5px 10px;
+    padding: 5px 30px;
     border-radius: 20px;
 }
 .search-box input {
@@ -50,7 +62,7 @@ body {
     background: white;
 }
 .logo img {
-    height: 70px;
+    height: 85px;
 }
 .menu {
     background: #27466d;
@@ -59,8 +71,8 @@ body {
     display: flex;
     justify-content: flex-end;
     gap: 40px;
-    padding: 27px 0;
-    padding-right: 15px;
+    padding: 25px 0;
+    padding-right: 20px;
     max-width: 800px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -75,7 +87,7 @@ body {
 /* Breadcrumb */
 .breadcrumb {
     background: #27466d;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 15px 40px;
     font-size: 14px;
     display: flex;
@@ -88,50 +100,70 @@ body {
 }
 
 
-
 /* --- Carrusel --- */
 .carrusel {
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 10px;
-  margin-left: 360px;
-  overflow: hidden;
-  background-color: #628ecb;
-  border-radius: 20px;
-  padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto; 
+    /* El valor original era margin-left: 360px; pero 'auto' centra correctamente */
+    overflow: hidden;
+    background-color: #628ecb; 
+    border-radius: 20px;
 }
 
+
 .carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
+    height: 400px;
+ display: flex;
+    transition: transform 0.5s ease;
+
+   
+    
 }
 
 .carousel-item {
-  min-width: 100%;
-  flex-shrink: 0;
-  text-align: center;
-  background-color: #8aaee0;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 12px;
+width: 100%;
+    flex-shrink: 0;
+    height: 400px; /* La a  ltura que funciona */
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    flex: 0 0 100%;
 }
 
-.carousel-item img {
-  max-width: 300px;
-  margin-bottom: 1rem;
+.carousel-item img {  
+width: 100%;
+    height: 100%; /* La imagen toma la altura del item (400px) */
+    object-fit: cover;
+    filter: brightness(0.6);
+    margin-bottom: 0;
+    max-width: unset;
+}
+
+.item-content{
+    position: absolute; /* CLAVE: Es absoluto al .carousel-item */
+    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: #cfd8e8d0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10;
+position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 1rem;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .arrow.left {

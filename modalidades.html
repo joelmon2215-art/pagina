@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Institucional</title>
+    <title>Modalidades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/modalidades.css">
 
     <style>
-                .video-section {
-            position: relative;
-            width: 100%;
-            height: 500px; /* ajusta la altura según tu diseño */
-            overflow: hidden;
-        }
+        .video-section {
+            margin: 40px auto; 
+            width: 90%;
+            max-width: auto; 
+            height: 40%;  
+            overflow: hidden; 
+            position: relative; 
 
+        }
         .background-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* recorta para que se adapte sin deformarse */
+            border-radius: 20px;   
+            width: 70%;
+            max-width: auto; 
+            height: 40%;
+            overflow: hidden; 
+            position: relative; 
+            object-fit: contain;
         }
-
                 .download-btn {
             display: inline-block;
             margin-top: 15px;
@@ -167,31 +173,39 @@
 
 
 <div class="breadcrumb">
-<a href="#">Inicio</a> > <span>modalidades</span>
+<a href="index.html">Inicio</a> > <span>modalidades</span>
 </div>
 
     <!-- Carrusel -->
 <section class="carrusel">
     <div class="carousel-track">
-        <div class="carousel-item active">
-        <img src="informatica.jpg" alt="Imagen 1">
-        <h3>Informatica</h3>
-        <p>Descripción de Informatica</p>
+        <div class="carousel-item activate">
+            <img src="informatica.jpg" alt="Imagen 1">
+            <div class="item-content">
+                <h3>Informatica</h3>
+                <p>Descripción de Informatica</p>
+            </div>
         </div>
         <div class="carousel-item">
-        <img src="electromecanica.jpg" alt="Imagen 2">
-        <h3>Electromecanica</h3>
-        <p>Descripción de Electromecanica.</p>
+            <img src="electromecanica.jpg" alt="Imagen 2">
+            <div class="item-content">
+                <h3>Electromecanica</h3>
+                <p>Descripción de Electromecanica.</p>
+            </div>
         </div>
         <div class="carousel-item">
-        <img src="electronica.jpg" alt="Imagen 3">
-        <h3>Electronica</h3>
-        <p>Descripción de electronica</p>
+            <img src="electronica.jpg" alt="Imagen 3">
+            <div class="item-content">
+                <h3>Electronica</h3>
+                <p>Descripción de electronica</p>
+            </div>
         </div>
-            <div class="carousel-item">
-        <img src="construcciones.jpg" alt="Imagen 3">
-        <h3>Maestro Mayor de Obras</h3>
-        <p>Descripción de Construcciones</p>
+        <div class="carousel-item">
+            <img src="construcciones.jpg" alt="Imagen 4">
+            <div class="item-content">
+                <h3>Maestro Mayor de Obras</h3>
+                <p>Descripción de Construcciones</p>
+            </div>
         </div>
     </div>
 
@@ -291,6 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightArrow = document.querySelector('.arrow.right');
     let currentIndex = 0;
 
+    
     // NUEVO: datos para la sección informativa con PDF
     const infoData = [
         {
