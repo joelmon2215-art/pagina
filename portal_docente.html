@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal Profesor | Mi Escuela</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/portal_docente.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!--libreria font awesome para los iconos-->>
+</head>
+
+<body>
+  <header class="header-portal">
+    <h1 id="saludo">Portal Profesor</h1>
+    <div class="header-controls">
+      <button id="btn-mode">🌙 Modo Oscuro / ☀ Claro</button>
+      <button id="btn-salir">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <!-- Enunciados importantes -->
+    <section aria-labelledby="titulo-enunciados">
+      <h2 id="titulo-enunciados">Enunciados importantes</h2>
+
+      <div class="toolbar">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="nota">Notas</button>
+          <button class="filter-btn" data-filter="fecha">Fechas</button>
+          <button class="filter-btn" data-filter="aviso">Avisos</button>
+          <button class="filter-btn" data-filter="importante"><i class="fas fa-star"></i> Importantes</button>
+        </div>
+        <div class="search">
+ <input type="text" id="buscador" placeholder="Buscar enunciados...">
+        </div>
+      </div>
+
+      <ul id="lista-enunciados" class="enunciados"></ul>
+
+      <form id="form-enunciado" class="form-enunciado" autocomplete="off">
+        <h3>Nuevo enunciado</h3>
+        <div class="form-grid">
+          <label>
+            Tipo
+            <select id="tipo">
+              <option value="nota">Nota</option>
+              <option value="fecha">Fecha</option>
+              <option value="aviso">Aviso</option>
+            </select>
+          </label>
+
+          <label>
+            Título
+            <input id="titulo" type="text" placeholder="Ej: Entrega TP Nº3" required>
+          </label>
+
+          <label>
+            Descripción
+            <input id="descripcion" type="text" placeholder="Ej: Se entrega el viernes" required>
+          </label>
+
+          <label>
+            Fecha (opcional)
+            <input id="fecha" type="date">
+          </label>
+        </div>
+       <div class="form-actions">
+          <button type="submit">Agregar</button>
+          <button type="reset" class="secondary">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Agenda del profesor -->
+    <section aria-labelledby="titulo-agenda">
+      <h2 id="titulo-agenda">Agenda del profesor</h2>
+      <ul id="lista-agenda" class="agenda"></ul>
+    </section>
+
+    <!-- Comunicaciones y recursos -->
+    <section aria-labelledby="titulo-comunicaciones">
+      <h2 id="titulo-comunicaciones">Comunicaciones y recursos</h2>
+      <ul id="lista-recursos" class="recursos"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>INSTITUTO</h3>
+        <div class="location-info">
+          <img src="logo indu.png" alt="Logo Instituto" width="150" height="150">
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>DIRECCIÓN</h3>
+        <div class="location-info">
+          <div class="location-item">
+            <strong>Ubicación de Colegio</strong>
+   <p>Bartolomé Mitre tanto</p>
+          </div>
+          <div class="location-item">
+            <strong>Ubicación de Taller</strong>
+            <p>No se</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>CONTACTO</h3>
+        <div class="contact-info">
+          <div class="contact-item"><i class="fas fa-phone-alt"></i><span>‪+54 11 1234-5678‬</span></div>
+          <div class="contact-item"><i class="fas fa-mobile-alt"></i><span>‪+54 9 11 8765-4321‬</span></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i><span>info@empresa.com</span></div>
+          <div class="contact-item"><i class="fas fa-globe"></i><span>www.empresa.com</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Alumnos de 6to II Informática. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Conectar tu JS aquí -->
+  <script src="scripts/portal_docente.js"></script>
+</body>
+</html>

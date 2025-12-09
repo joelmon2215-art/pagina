@@ -13,28 +13,22 @@ const usuariosAutorizados = [
     },
     // Usuario de Prueba (Docente)
     { 
-        nombre: "Docente Titular", 
-        cuil: "30987654321", 
-        email: "profe@escuela.com", 
-        password: "456", 
+        nombre: "Alexis", 
+        cuil: "1111", 
+        email: "profe@gmail.com", 
+        password: "1234", 
         rol: "docente" 
     },
     // Usuario de Prueba (Tutor/Padre)
     { 
         nombre: "Tutor Autorizado", 
-        cuil: "27112233445", 
-        email: "tutor@escuela.com", 
-        password: "789", 
+        cuil: "1111", 
+        email: "tutor@gmail.com", 
+        password: "1234", 
         rol: "tutor" 
     },
     // Usuario de Prueba (Egresado)
-    { 
-        nombre: "Egresado Promoción", 
-        cuil: "23556677889", 
-        email: "egresado@escuela.com", 
-        password: "000", 
-        rol: "egresado" 
-    }
+
 ];
 
 document.getElementById('loginForm').addEventListener('submit', function(e) {
@@ -63,7 +57,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         switch(usuarioEncontrado.rol) {
             case 'alumno': window.location.href = "portal_alumno.html"; break;
             case 'docente': window.location.href = "portal_docente.html"; break;
-            case 'egresado': window.location.href = "portal_egresado.html"; break;
             case 'tutor': window.location.href = "portal_tutor.html"; break;
             default: alert("Error: Rol no definido.");
         }
