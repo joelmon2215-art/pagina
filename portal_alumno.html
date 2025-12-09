@@ -5,31 +5,88 @@
     <title>Portal Alumno | Mi Escuela</title>
     <link rel="stylesheet" href="styles/portal_alumno.css">
 </head>
-<body id="portal-alumno">
 
-<nav class="navbar">
-    <h1 id="saludo">Cargando...</h1>
-    <button class="btn-cerrar" onclick="cerrarSesion()">Cerrar Sesión</button>
-</nav>
+    
+<body>
+    
+    <header class="header-portal">
+        <h1 id="saludo">Cargando...</h1> 
+        
+        <div class="header-controls">
+            <button onclick="toggleDarkMode()">🌙 Modo Oscuro / ☀️ Claro</button>
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+    </header>
 
-    <div class="main-content">
-        <section class="card">
-            <h2>📅 Mis Horarios</h2>
-            <table id="tabla-horarios">
-                <thead>
-                    <tr><th>Día</th><th>Hora</th><th>Materia</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+    <main class="dashboard">
+
+       <section class="card rendimiento-academico">
+            <h3>📊 Rendimiento Académico</h3>
+            <div id="promedio-valor">Cargando promedio...</div>
         </section>
 
-        <section class="card">
-            <h2>📝 Mis Notas (Recientes)</h2>
-            <ul id="lista-notas">
+        <section class="card ultimas-notas">
+            <h3>📝 Mis Últimas Notas</h3>
+            <ul id="lista-ultimas-notas" class="examenes-list">
                 </ul>
         </section>
-    </div>
+        <section class="card calendario">
+        
+        </main>
 
     <script src="scripts/portal_alumno.js"></script>
 </body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>INSTITUTO</h3>
+            <div class="location-info">
+                <img src="logo indu.png" alt="" width="150px" height="150px">
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>DIRECCIÓN</h3>
+            <div class="location-info">
+                <div class="location-item">
+                    <strong>Ubicación de Colegio</strong>
+                    <p>Bartolome Mitre tanto</p>
+                </div>
+                <div class="location-item">
+                    <strong>Ubicacion de Taller</strong>
+                    <p>No se</p>
+                </div>
+            </div>
+        </div>
+            
+        <div class="footer-section">
+            <h3>CONTACTO</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+54 11 1234-5678</span>
+                </div>
+                    <div class="contact-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>+54 9 11 8765-4321</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@empresa.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span>www.empresa.com</span>
+                </div>
+            </div>
+        </div>
+            
+
+    </div>
+        
+    <div class="footer-bottom">
+        <p>&copy; 2025 Alumnos de 6to II Informatica. Todos los derechos reservados.</p>
+    </div>
+</footer>
 </html>

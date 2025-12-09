@@ -1,65 +1,273 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f2f5;
+/* ========================================= */
+/* 1. Estilos Base y Reset */
+/* ========================================= */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem 2rem;
+body {
+    background-color: #f4f7f6; /* Fondo claro por defecto */
+    color: #333; /* Texto oscuro por defecto */
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el modo oscuro */
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========================================= */
+/* 2. Encabezado (Header) y Controles */
+/* ========================================= */
+.header-portal {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
 }
 
-.main-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
+.header-portal h1 {
+    font-size: 24px;
+    color: #2c3e50;
 }
 
+.header-controls button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 600;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.header-controls button:hover {
+    background-color: #2980b9;
+}
+
+/* ========================================= */
+/* 3. Tarjetas (Cards) Generales */
+/* ========================================= */
 .card {
     background: white;
-    border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.card h3 {
+    color: #34495e;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
 
-th, td {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+/* ========================================= */
+/* 4. Rendimiento Académico (Punto A) */
+/* ========================================= */
+.nota {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
-#lista-notas {
+/* Colores Semánticos para el promedio */
+.promocionado {
+    background-color: #2ecc71; /* Verde - Éxito */
+    color: white;
+}
+
+.regular {
+    background-color: #f1c40f; /* Amarillo - Precaución */
+    color: #333;
+}
+
+.riesgo {
+    background-color: #e74c3c; /* Rojo - Riesgo */
+    color: white;
+}
+
+/* ========================================= */
+/* 5. Exámenes (Punto B) */
+/* ========================================= */
+.examenes-list {
     list-style: none;
     padding: 0;
 }
 
-#lista-notas li {
-    padding: 10px;
-    border-left: 4px solid #3498db;
-    background: #f9f9f9;
-    margin-bottom: 10px;
-}
-.btn-cerrar {
-    background-color: #e74c3c; /* Color rojo para indicar salida */
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+.examenes-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05em;
 }
 
-.btn-cerrar:hover {
-    background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+.examenes-list li:last-child {
+    border-bottom: none;
 }
+
+.dias-restantes {
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: #3498db; /* Azul */
+    color: white;
+    font-size: 0.9em;
+}
+
+/* ========================================= */
+/* 6. Modo Oscuro (Punto D) */
+/* ========================================= */
+
+body.dark-mode {
+    background-color: #2c3e50; /* Fondo Oscuro */
+    color: #ecf0f1; /* Texto Claro */
+}
+
+body.dark-mode .card {
+    background-color: #34495e; /* Tarjetas más oscuras */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .header-portal {
+    border-bottom-color: #555;
+}
+
+body.dark-mode .header-portal h1 {
+    color: #ecf0f1;
+}
+
+body.dark-mode .card h3 {
+    color: #ecf0f1;
+    border-bottom-color: #555;
+}
+
+body.dark-mode .examenes-list li {
+    border-bottom-color: #555;
+}
+
+/* Asegura que los botones del header sean visibles en modo oscuro */
+body.dark-mode .header-controls button {
+    background-color: #f39c12; /* Naranja para contraste */
+    color: #333;
+}
+
+/* --- Footer --- */
+          footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 0;
+            
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 150px;
+            margin-bottom: 1.5rem;
+            padding: 0 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;      
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            background-color: #34495e;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-item i {
+            margin-right: 1rem;
+            color: #3498db;
+            width: 30px;
+            text-align: center;
+        }
+
+        .location-info {
+            margin-top: 1rem;
+
+        }
+
+        .location-item {
+            margin-bottom: 0.8rem;
+        }
+
+        .location-item strong {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid #34495e;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 0;
+        }
+    
+
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .turnos-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .horario-table {
+                font-size: 0.9rem;
+            }
+            
+            .horario-table th, 
+            .horario-table td {
+                padding: 8px 10px;
+            }
+                        .footer-container {
+                flex-direction: column;
+            }
+            
+            
+        }

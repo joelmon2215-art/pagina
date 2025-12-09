@@ -1,30 +1,42 @@
 /**
- * INICIALIZACIÓN: Inyecta un usuario de prueba si la lista está vacía.
+ * LISTA DE USUARIOS AUTORIZADOS
+ * Solo los usuarios definidos en este array podrán acceder a los portales.
  */
-(function inicializarAdmin() {
-    let listaUsuarios = JSON.parse(localStorage.getItem('baseDeDatosEscuela')) || [];
-
-    // Definimos el usuario de prueba
-    const usuarioPrueba = {
-        nombre: "Nacho",
-        cuil: "20480863098",
-        email: "nacho@gmail.com",
-        password: "1234",
-        rol: "alumno" // Puedes cambiarlo a 'docente' para probar otras páginas
-    };
-
-    const existe = listaUsuarios.find(u => u.cuil === usuarioPrueba.cuil);
-
-    if (!existe) {
-        listaUsuarios.push(usuarioPrueba);
-        localStorage.setItem('baseDeDatosEscuela', JSON.stringify(listaUsuarios));
-        console.log("Usuario de prueba inyectado correctamente.");
+const usuariosAutorizados = [
+    // Usuario de Prueba (Alumno)
+    { 
+        nombre: "Gonzalez Juan Ignacio", 
+        cuil: "1111", 
+        email: "alumno@gmail.com", 
+        password: "1234", 
+        rol: "alumno" 
+    },
+    // Usuario de Prueba (Docente)
+    { 
+        nombre: "Docente Titular", 
+        cuil: "30987654321", 
+        email: "profe@escuela.com", 
+        password: "456", 
+        rol: "docente" 
+    },
+    // Usuario de Prueba (Tutor/Padre)
+    { 
+        nombre: "Tutor Autorizado", 
+        cuil: "27112233445", 
+        email: "tutor@escuela.com", 
+        password: "789", 
+        rol: "tutor" 
+    },
+    // Usuario de Prueba (Egresado)
+    { 
+        nombre: "Egresado Promoción", 
+        cuil: "23556677889", 
+        email: "egresado@escuela.com", 
+        password: "000", 
+        rol: "egresado" 
     }
-})();
+];
 
-/**
- * LOGIN: Valida y redirige según el rol.
- */
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -32,9 +44,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const emailIngresado = document.getElementById('email').value;
     const passIngresada = document.getElementById('password').value;
 
-    const listaUsuarios = JSON.parse(localStorage.getItem('baseDeDatosEscuela')) || [];
-
-    const usuario = listaUsuarios.find(u => 
+    // Buscar la coincidencia SOLO dentro del array "usuariosAutorizados"
+    const usuarioEncontrado = usuariosAutorizados.find(u => 
         u.cuil === cuilIngresado && 
         u.email === emailIngresado && 
         u.password === passIngresada
@@ -42,21 +53,22 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
     const msgError = document.getElementById('mensajeError');
 
-    if (usuario) {
-        localStorage.setItem('usuarioNombre', usuario.nombre);
-        localStorage.setItem('usuarioRol', usuario.rol);
-        localStorage.setItem('usuarioCUIL', usuario.cuil);
+    if (usuarioEncontrado) {
+        // Guardamos los datos de la sesión (nombre y rol)
+        localStorage.setItem('usuarioNombre', usuarioEncontrado.nombre);
+        localStorage.setItem('usuarioRol', usuarioEncontrado.rol);
+        localStorage.setItem('usuarioCUIL', usuarioEncontrado.cuil);
 
-        // Redirección dinámica basada en el mapa de sitio
-        switch(usuario.rol) {
+        // Redirección dinámica basada en el rol
+        switch(usuarioEncontrado.rol) {
             case 'alumno': window.location.href = "portal_alumno.html"; break;
             case 'docente': window.location.href = "portal_docente.html"; break;
             case 'egresado': window.location.href = "portal_egresado.html"; break;
             case 'tutor': window.location.href = "portal_tutor.html"; break;
-            default: alert("Rol no definido");
+            default: alert("Error: Rol no definido.");
         }
     } else {
         msgError.style.display = "block";
-        msgError.innerText = "Datos incorrectos o usuario no registrado.";
+        msgError.innerText = "Acceso denegado. Credenciales no autorizadas.";
     }
 });
