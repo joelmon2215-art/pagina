@@ -26,41 +26,36 @@ body {
   font-size: 24px;
   padding: 40px;
   border-radius: 8px;
+  
+  
 }
 
 /* Historia */
 .history-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 40px 20px;
-  gap: 20px;
+    display: flex;
+    justify-content: center;   /* centra horizontalmente */
+    align-items: center;       /* centra verticalmente */
+    padding: 40px;
+    
 }
 
 .history-card {
-  display: flex;
-  flex: 1 1 45%;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  overflow: hidden;
+    max-width: 900px;
+    text-align: center;       /* centra el contenido dentro */
+    
 }
 
-.image-box {
-  background-color: #3399ff;
-  color: white;
-  width: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+.image-box img {
+    display: block; 
+    margin-left: 300px;            /* centra la imagen */
+    max-width: 100%;           /* que no se desborde */
+    height: auto;
 }
 
 .text-box {
-  padding: 20px;
-  width: 60%;
+    margin-top: 20px;
+    
 }
-
 /* Timeline */
 .timeline-section {
   background-color: #e0e0e0;

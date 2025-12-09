@@ -1,0 +1,129 @@
+/* 1. RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Fondo gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. CAJA BLANCA (CONTENEDOR) */
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 420px; /* Un poco más ancho para que respire el diseño */
+    text-align: left; /* Alineación de etiquetas */
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+/* 3. ETIQUETAS Y CAMPOS */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px; /* Más espacio entre campos */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+/* 4. BOTÓN INGRESAR */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* 5. ENLACE DE REGISTRO (CORREGIDO) */
+.registro-link {
+    text-align: center;
+    margin-top: 25px; /* Espacio arriba del separador */
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Línea divisoria interna */
+}
+
+.registro-link p {
+    font-size: 14px;
+    color: #666;
+}
+
+.registro-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.registro-link a:hover {
+    text-decoration: underline;
+}
+
+/* 6. MENSAJES DE ERROR */
+#mensajeError, #errorMatch {
+    background-color: #fdecea;
+    color: #d32f2f;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+.back-home {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.back-home a {
+    color: #95a5a6; /* Gris suave para que no compita con el título */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-home a:hover {
+    color: #3498db; /* Azul al pasar el mouse */
+    text-decoration: underline;
+}
