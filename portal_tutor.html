@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Portal Padre | Mi Escuela</title>
-    <link rel="stylesheet" href="styles/portal_alumno.css">
+    <link rel="stylesheet" href="styles/tutor.css">
 </head>
 
-    
 <body>
-    
     <header class="header-portal">
         <h1 id="saludo">Cargando...</h1> 
         
@@ -20,35 +18,19 @@
 
     <main class="dashboard">
 
-       <!-- Promedio -->
-    <section>
-      <h2>Promedio General</h2>
-      <div id="promedio-valor"></div>
-    </section>
+        <!-- Notas de los hijos -->
+        <section>
+            <h2>Notas de tus hijos</h2>
+            <ul id="lista-notas-hijos"></ul>
+        </section>
 
-    <!-- Últimas notas -->
-    <section>
-      <h2>Últimas Notas</h2>
-      <ul id="lista-ultimas-notas"></ul>
-    </section>
+        <!-- Inscripción de nuevos alumnos -->
+        <section>
+            <h2>Inscripción de nuevos alumnos</h2>
+            <ul id="lista-inscripciones"></ul>
+        </section>
 
-    <!-- Exámenes -->
-    <section>
-      <h2>Calendario de Exámenes</h2>
-      <ul id="lista-examenes"></ul>
-    </section>
-
-    <!-- Fechas de inscripción -->
-    <section>
-      <h2>Fechas de Inscripción</h2>
-      <ul id="lista-inscripciones">
-        <li>Inscripción a ciclo lectivo 2026: <strong>10/02/2026</strong></li>
-        <li>Reinscripción alumnos regulares: <strong>15/02/2026</strong></li>
-        <li>Inscripción a talleres extracurriculares: <strong>01/03/2026</strong></li>
-      </ul>
-    </section>
-        
-        </main>
+    </main>
 
     <script src="scripts/portal_padres.js"></script>
 </body>
@@ -58,7 +40,7 @@
         <div class="footer-section">
             <h3>INSTITUTO</h3>
             <div class="location-info">
-                <img src="logo indu.png" alt="" width="150px" height="150px">
+                <img src="logo indu.png" alt="Logo Instituto" width="150px" height="150px">
             </div>
         </div>
 
@@ -70,7 +52,7 @@
                     <p>Bartolome Mitre tanto</p>
                 </div>
                 <div class="location-item">
-                    <strong>Ubicacion de Taller</strong>
+                    <strong>Ubicación de Taller</strong>
                     <p>No se</p>
                 </div>
             </div>
@@ -83,7 +65,7 @@
                     <i class="fas fa-phone-alt"></i>
                     <span>+54 11 1234-5678</span>
                 </div>
-                    <div class="contact-item">
+                <div class="contact-item">
                     <i class="fas fa-mobile-alt"></i>
                     <span>+54 9 11 8765-4321</span>
                 </div>
@@ -97,12 +79,10 @@
                 </div>
             </div>
         </div>
-            
-
     </div>
         
     <div class="footer-bottom">
-        <p>&copy; 2025 Alumnos de 6to II Informatica. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Alumnos de 6to II Informática. Todos los derechos reservados.</p>
     </div>
 </footer>
 </html>

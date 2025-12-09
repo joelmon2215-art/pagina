@@ -1,0 +1,285 @@
+/* ========================================= */
+/* 1. Estilos Base y Reset */
+/* ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6; /* Fondo claro por defecto */
+    color: #333; /* Texto oscuro por defecto */
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========================================= */
+/* 2. Encabezado (Header) y Controles */
+/* ========================================= */
+.header-portal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-portal h1 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.header-controls button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 600;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.header-controls button:hover {
+    background-color: #2980b9;
+}
+
+/* ========================================= */
+/* 3. Secciones Generales */
+/* ========================================= */
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #34495e;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* ========================================= */
+/* 4. Notas de los hijos */
+/* ========================================= */
+#lista-notas-hijos {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-notas-hijos li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lista-notas-hijos li:last-child {
+    border-bottom: none;
+}
+
+.nota {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Colores semánticos */
+.promocionado {
+    background-color: #2ecc71; /* Verde */
+    color: white;
+}
+
+.regular {
+    background-color: #f1c40f; /* Amarillo */
+    color: #333;
+}
+
+.riesgo {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+}
+
+/* ========================================= */
+/* 5. Inscripciones */
+/* ========================================= */
+#lista-inscripciones {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-inscripciones li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#lista-inscripciones li strong {
+    color: #3498db;
+}
+
+.estado {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Colores de estado */
+.estado.abierto {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.estado.proximo {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.estado.cerrado {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* ========================================= */
+/* 6. Modo Oscuro */
+/* ========================================= */
+body.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-mode section {
+    background-color: #34495e;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .header-portal {
+    border-bottom-color: #555;
+}
+
+body.dark-mode .header-portal h1 {
+    color: #ecf0f1;
+}
+
+body.dark-mode section h2 {
+    color: #ecf0f1;
+    border-bottom-color: #555;
+}
+
+body.dark-mode .header-controls button {
+    background-color: #f39c12;
+    color: #333;
+}
+
+/* ========================================= */
+/* 7. Footer */
+/* ========================================= */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.contact-info {
+    margin-top: 1rem;
+    background-color: #34495e;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.contact-item i {
+    margin-right: 1rem;
+    color: #3498db;
+    width: 30px;
+    text-align: center;
+}
+
+.location-info {
+    margin-top: 1rem;
+}
+
+.location-item {
+    margin-bottom: 0.8rem;
+}
+
+.location-item strong {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #34495e;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 0;
+}
+
+/* ========================================= */
+/* 8. Responsive */
+/* ========================================= */
+@media (max-width: 768px) {
+    .header-portal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-controls {
+        margin-top: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
